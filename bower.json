@@ -1,0 +1,25 @@
+{
+  "name": "Cube Man",
+  "authors": [
+    "Ryan Sterling <ryan.s3@hotmail.com>"
+  ],
+  "description": "Cube Man",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "https://github.com/CentennialCollege/COMP392-Lesson3-Demo",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "Scripts/lib"
+  ],
+  "dependencies": {
+    "three.js": "threejs#*",
+    "dat-gui": "~0.5.1",
+    "stats.js": "*",
+    "threex.colliders": "*"
+  }
+}
