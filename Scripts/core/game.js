@@ -40,8 +40,33 @@ var control;
 var gui;
 var stats;
 var step = 0;
+var cubeBody;
 var cubeGeometry;
 var cubeMaterial;
+///////////////////////////////////
+var human;
+var head;
+var headGeometry;
+var headMaterial;
+var bh;
+B;
+var body;
+var bodyGeometry;
+var bodyMaterial;
+var rArm;
+var rArmGeometry;
+var rArmMaterial;
+var lArm;
+var lArmGeometry;
+var lArmMaterial;
+var rLeg;
+var rLegGeometry;
+var rLegMaterial;
+var lLeg;
+var lLegGeometry;
+var lLegMaterial;
+var randomColors;
+///////////////////////////////////
 function init() {
     // Instantiate a new Scene object
     scene = new Scene();
@@ -65,6 +90,70 @@ function init() {
     cube.position.y = 1;
     scene.add(cube);
     console.log("Added Cube Primitive to scene...");
+    ////////////////////////////////////////////////////
+    //Add a HEAD to the Scene
+    headMaterial = new LambertMaterial({ color: 0xFFCCCC });
+    headGeometry = new CubeGeometry(2, 2, 2);
+    head = new Mesh(headGeometry, headMaterial);
+    head.castShadow = true;
+    head.receiveShadow = true;
+    head.position.y = 10;
+    scene.add(head);
+    human.add(head);
+    console.log("Added Head Cube Primitive to scene...");
+    //Add a BODY to the Scene
+    bodyMaterial = new LambertMaterial({ color: 0x9900CC });
+    bodyGeometry = new CubeGeometry(6, 6, 2);
+    body = new Mesh(bodyGeometry, bodyMaterial);
+    body.castShadow = true;
+    body.receiveShadow = true;
+    body.position.y = 9;
+    scene.add(body);
+    human.add(body);
+    console.log("Added body Cube Primitive to scene...");
+    //Add a RIGHT ARM to the Scene
+    rArmMaterial = new LambertMaterial({ color: 0x0000CC });
+    rArmGeometry = new CubeGeometry(6, 2, 2);
+    rArm = new Mesh(rArmGeometry, rArmMaterial);
+    rArm.castShadow = true;
+    rArm.receiveShadow = true;
+    rArm.position.x = 5;
+    scene.add(rArm);
+    human.add(rArm);
+    console.log("Added right arm Cube Primitive to scene...");
+    //Add a LEFT ARM to the Scene
+    lArmMaterial = new LambertMaterial({ color: 0x0000CC });
+    lArmGeometry = new CubeGeometry(-6, 2, 2);
+    lArm = new Mesh(lArmGeometry, lArmMaterial);
+    lArm.castShadow = true;
+    lArm.receiveShadow = true;
+    lArm.position.x = -5;
+    scene.add(lArm);
+    human.add(lArm);
+    console.log("Added left arm Cube Primitive to scene...");
+    //Add a LEFT LEG to the Scene
+    lLegMaterial = new LambertMaterial({ color: 0x0000CC });
+    lLegGeometry = new CubeGeometry(2, 2, 2);
+    lLeg = new Mesh(lLegGeometry, lLegMaterial);
+    lLeg.castShadow = true;
+    lLeg.receiveShadow = true;
+    lLeg.position.y = 5;
+    scene.add(lLeg);
+    human.add(lLeg);
+    console.log("Added left leg Cube Primitive to scene...");
+    //Add a RIGHT LEG to the Scene
+    rLegMaterial = new LambertMaterial({ color: 0x0000CC });
+    rLegGeometry = new CubeGeometry(2, 2, 2);
+    rLeg = new Mesh(rLegGeometry, rLegMaterial);
+    rLeg.castShadow = true;
+    rLeg.receiveShadow = true;
+    rLeg.position.y = 5;
+    scene.add(rLeg);
+    human.add(rLeg);
+    console.log("Added right leg Cube Primitive to scene...");
+    //adds human object to the scene
+    scene.add(human);
+    ////////////////////////////////////////////////////
     // Add an AmbientLight to the scene
     ambientLight = new AmbientLight(0x090909);
     scene.add(ambientLight);
@@ -109,6 +198,12 @@ function addStatsObject() {
 function gameLoop() {
     stats.update();
     cube.rotation.y += control.rotationSpeed;
+    ///////////////////////////////////////
+    //rotates HUMAN OBJECT
+    human.rotation.y += control.rotationSpeed;
+    human.rotation.x += control.rotationSpeed;
+    human.rotation.z += control.rotationSpeed;
+    ///////////////////////////////////////
     // render using requestAnimationFrame
     requestAnimationFrame(gameLoop);
     // render the scene

@@ -47,12 +47,14 @@ var step: number = 0;
 var cubeBody: Mesh;
 var cubeGeometry:CubeGeometry;
 var cubeMaterial:LambertMaterial;
+
 ///////////////////////////////////
 var human:Object3D;
 var head: Mesh;
 var headGeometry:CubeGeometry;
 var headMaterial:LambertMaterial;
 
+var bh: Mesh;B
 var body: Mesh;
 var bodyGeometry:CubeGeometry;
 var bodyMaterial:LambertMaterial;
@@ -72,6 +74,8 @@ var rLegMaterial:LambertMaterial;
 var lLeg: Mesh;
 var lLegGeometry:CubeGeometry;
 var lLegMaterial:LambertMaterial;
+
+var randomColors
 ///////////////////////////////////
 
 function init() {
