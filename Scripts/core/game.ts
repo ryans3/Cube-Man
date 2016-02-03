@@ -54,7 +54,6 @@ var head: Mesh;
 var headGeometry:CubeGeometry;
 var headMaterial:LambertMaterial;
 
-
 var body: Mesh;
 var bodyGeometry:CubeGeometry;
 var bodyMaterial:LambertMaterial;
