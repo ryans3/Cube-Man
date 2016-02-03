@@ -48,8 +48,7 @@ var human;
 var head;
 var headGeometry;
 var headMaterial;
-var bh;
-B;
+
 var body;
 var bodyGeometry;
 var bodyMaterial;
