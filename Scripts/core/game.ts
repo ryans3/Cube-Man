@@ -246,7 +246,7 @@ function init() {
     
     // add controls
     gui = new GUI();
-    control = new Control(0.05);
+    control = new Control(0.05,0.05,0.05);
     addControl(control);
 
     // Add framerate stats
@@ -268,7 +268,9 @@ function onResize(): void {
 }
 
 function addControl(controlObject: Control): void {
-    gui.add(controlObject, 'rotationSpeed',-0.5,0.5);
+    gui.add(controlObject, 'rotationSpeedX',-0.5,0.5);
+    gui.add(controlObject, 'rotationSpeedY',-0.5,0.5);
+    gui.add(controlObject, 'rotationSpeedZ',-0.5,0.5);
 }
 
 function addStatsObject() {
@@ -284,13 +286,13 @@ function addStatsObject() {
 function gameLoop(): void {
     stats.update();
 
-    cube.rotation.y += control.rotationSpeed;
+    //cube.rotation.y += control.rotationSpeed;
     ///////////////////////////////////////
     
     //rotates HUMAN OBJECT
-    human.rotation.y += control.rotationSpeed;
-    human.rotation.x += control.rotationSpeed;
-    human.rotation.z += control.rotationSpeed;
+    human.rotation.y += control.rotationSpeedX;
+    human.rotation.x += control.rotationSpeedY;
+    human.rotation.z += control.rotationSpeedZ;
     
     ///////////////////////////////////////
    
