@@ -115,7 +115,7 @@ function init() {
     lFist = new Mesh(lFistGeometry, lFistMaterial);
     lFist.castShadow = true;
     lFist.receiveShadow = true;
-    lFist.position.x = -7;
+    lFist.position.x = -8;
     scene.add(lFist);
     human.add(lFist);
     console.log("Added Left Fist Cube Primitive to scene...");
