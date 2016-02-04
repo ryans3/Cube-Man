@@ -169,7 +169,7 @@ function init() {
     
     //Add a LEFT LEG to the Scene
     lLegMaterial = new LambertMaterial({color:0x0000CC});
-    lLegGeometry = new CubeGeometry(-5, 2, 2);
+    lLegGeometry = new CubeGeometry(2, -6, 2);
     lLeg = new Mesh(lLegGeometry, lLegMaterial);
     lLeg.castShadow = true;
     lLeg.receiveShadow = true;
@@ -183,7 +183,7 @@ function init() {
     
     //Add a RIGHT LEG to the Scene
     rLegMaterial = new LambertMaterial({color:0x0000CC});
-    rLegGeometry = new CubeGeometry(-5, 2, 2);
+    rLegGeometry = new CubeGeometry(2,-6, 2);
     rLeg = new Mesh(rLegGeometry, rLegMaterial);
     rLeg.castShadow = true;
     rLeg.receiveShadow = true;

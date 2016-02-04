@@ -135,7 +135,7 @@ function init() {
     console.log("Added left arm Cube Primitive to scene...");
     //Add a LEFT LEG to the Scene
     lLegMaterial = new LambertMaterial({ color: 0x0000CC });
-    lLegGeometry = new CubeGeometry(-5, 2, 2);
+    lLegGeometry = new CubeGeometry(2, -6, 2);
     lLeg = new Mesh(lLegGeometry, lLegMaterial);
     lLeg.castShadow = true;
     lLeg.receiveShadow = true;
@@ -146,7 +146,7 @@ function init() {
     console.log("Added left leg Cube Primitive to scene...");
     //Add a RIGHT LEG to the Scene
     rLegMaterial = new LambertMaterial({ color: 0x0000CC });
-    rLegGeometry = new CubeGeometry(-5, 2, 2);
+    rLegGeometry = new CubeGeometry(2, -6, 2);
     rLeg = new Mesh(rLegGeometry, rLegMaterial);
     rLeg.castShadow = true;
     rLeg.receiveShadow = true;
