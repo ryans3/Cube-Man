@@ -225,6 +225,7 @@ function addControl(controlObject) {
 var HumanControls = function () {
     this.humanColor = "#ff0098";
 };
+var gui = new dat.GUI();
 var hc = new HumanControls();
 var f1 = gui.addFolder("Colors");
 var humanColor = f1.addColor(hc, "humanColor");
