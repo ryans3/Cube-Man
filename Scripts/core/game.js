@@ -125,7 +125,7 @@ function init() {
     rFist = new Mesh(rFistGeometry, rFistMaterial);
     rFist.castShadow = true;
     rFist.receiveShadow = true;
-    rFist.position.x = 7;
+    rFist.position.x = 8;
     scene.add(rFist);
     human.add(rFist);
     console.log("Added Right Fist Cube Primitive to scene...");
