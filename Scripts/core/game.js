@@ -139,7 +139,8 @@ function init() {
     lLeg = new Mesh(lLegGeometry, lLegMaterial);
     lLeg.castShadow = true;
     lLeg.receiveShadow = true;
-    lLeg.position.y = 5;
+    lLeg.position.y = -7;
+    lLeg.position.x = 2;
     scene.add(lLeg);
     human.add(lLeg);
     console.log("Added left leg Cube Primitive to scene...");
@@ -149,7 +150,8 @@ function init() {
     rLeg = new Mesh(rLegGeometry, rLegMaterial);
     rLeg.castShadow = true;
     rLeg.receiveShadow = true;
-    rLeg.position.y = 5;
+    rLeg.position.y = -7;
+    rLeg.position.x = -2;
     scene.add(rLeg);
     human.add(rLeg);
     console.log("Added right leg Cube Primitive to scene...");
