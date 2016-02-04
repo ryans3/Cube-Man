@@ -113,7 +113,7 @@ function init() {
     cube.receiveShadow = true;
     cube.position.y = 1;
     
-    scene.add(cube);
+    //scene.add(cube);
     console.log("Added Cube Primitive to scene...");
     
     ////////////////////////////////////////////////////
@@ -132,11 +132,11 @@ function init() {
     
     //Add a BODY to the Scene
     bodyMaterial = new LambertMaterial({color:0x9900CC});
-    bodyGeometry = new CubeGeometry(6, 6, 2);
+    bodyGeometry = new CubeGeometry(5, 5, 2);
     body = new Mesh(bodyGeometry, bodyMaterial);
     body.castShadow = true;
     body.receiveShadow = true;
-    body.position.y = 9;
+    body.position.y = 1;
     
     scene.add(body);
     human.add(body);
