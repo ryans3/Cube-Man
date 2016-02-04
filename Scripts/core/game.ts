@@ -124,7 +124,7 @@ function init() {
     head = new Mesh(headGeometry, headMaterial);
     head.castShadow = true;
     head.receiveShadow = true;
-    head.position.y = 3;
+    head.position.y = 2.5;
     
     scene.add(head);
     human.add(head);
@@ -174,7 +174,7 @@ function init() {
     lLeg.castShadow = true;
     lLeg.receiveShadow = true;
     lLeg.position.y = -6;
-    lLeg.position.x = 2;
+    lLeg.position.x = 1;
     
     scene.add(lLeg);
     human.add(lLeg);
@@ -188,7 +188,7 @@ function init() {
     rLeg.castShadow = true;
     rLeg.receiveShadow = true;
     rLeg.position.y = -6;
-    rLeg.position.x = -2;
+    rLeg.position.x = -1;
     
     scene.add(rLeg);
     human.add(rLeg);
