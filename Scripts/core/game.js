@@ -85,7 +85,7 @@ function init() {
     plane.rotation.x = -0.5 * Math.PI;
     ////////////////////////////////////////////
     // Changing Plane Positioning
-    plane.position.y = -4;
+    plane.position.y = -6;
     scene.add(plane);
     console.log("Added Plane Primitive to scene...");
     //Add a Cube to the Scene
