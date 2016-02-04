@@ -279,7 +279,7 @@ function addControl(controlObject: Control): void {
 
 var HumanControls = function() {
     this.humanColor = "#ff0098";
-};
+}
 
 var hc = new HumanControls();
 var f1 = gui.addFolder("Colors")
