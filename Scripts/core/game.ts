@@ -197,7 +197,7 @@ function init() {
 
     //adds human object to the scene
     scene.add(human);
-    
+    human.position.y = 4;
     ////////////////////////////////////////////////////
     // Add an AmbientLight to the scene
     ambientLight = new AmbientLight(0x090909);
