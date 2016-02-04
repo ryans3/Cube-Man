@@ -220,6 +220,17 @@ function addControl(controlObject) {
     gui.add(controlObject, 'rotationSpeedZ', -0.5, 0.5);
     //gui.addColor(human, "Color");
 }
+/////////////////////////////////////////////////////////
+//ADDING COLORS
+var HumanControls = function () {
+    this.humanColor = "#ff0098";
+};
+var hc = new HumanControls();
+var f1 = gui.addFolder("Colors");
+var humanColor = f1.addColor(hc, "humanColor");
+humanColor.onChange(function (value) {
+});
+/////////////////////////////////////////////////////////
 function addStatsObject() {
     stats = new Stats();
     stats.setMode(0);

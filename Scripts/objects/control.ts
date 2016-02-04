@@ -7,6 +7,7 @@ module objects {
         public rotationSpeedX:number;
         public rotationSpeedY:number;
         public rotationSpeedZ:number;
+        
         // CONSTRUCTOR ++++++++++++++++++++++++++++++++++++++++
         constructor(rotationSpeedX:number,rotationSpeedY:number,rotationSpeedZ:number) {
            this.rotationSpeedX = rotationSpeedX;
@@ -16,6 +17,6 @@ module objects {
         
        
         //PUBLIC METHODS +++++++++++++++++++++++++++++++++++++++
-       
+
     }
 }
