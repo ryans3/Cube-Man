@@ -271,7 +271,7 @@ function addControl(controlObject: Control): void {
     gui.add(controlObject, 'rotationSpeedX',-0.5,0.5);
     gui.add(controlObject, 'rotationSpeedY',-0.5,0.5);
     gui.add(controlObject, 'rotationSpeedZ',-0.5,0.5);
-    gui.addColor(human, "Color");
+    //gui.addColor(human, "Color");
 }
 
 function addStatsObject() {
