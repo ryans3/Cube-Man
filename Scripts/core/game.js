@@ -48,6 +48,12 @@ var human;
 var head;
 var headGeometry;
 var headMaterial;
+var lFist;
+var lFistGeometry;
+var lFistMaterial;
+var rFist;
+var rFistGeometry;
+var rFistMaterial;
 var body;
 var bodyGeometry;
 var bodyMaterial;
@@ -103,6 +109,26 @@ function init() {
     scene.add(head);
     human.add(head);
     console.log("Added Head Cube Primitive to scene...");
+    //Add a LEFT FIST to the Scene
+    lFistMaterial = new LambertMaterial({ color: 0xFFCCCC });
+    lFistGeometry = new CubeGeometry(2, 2, 2);
+    lFist = new Mesh(lFistGeometry, lFistMaterial);
+    lFist.castShadow = true;
+    lFist.receiveShadow = true;
+    lFist.position.x = -7;
+    scene.add(lFist);
+    human.add(lFist);
+    console.log("Added Left Fist Cube Primitive to scene...");
+    //Add a RIGHT FIST to the Scene
+    rFistMaterial = new LambertMaterial({ color: 0xFFCCCC });
+    rFistGeometry = new CubeGeometry(2, 2, 2);
+    rFist = new Mesh(rFistGeometry, rFistMaterial);
+    rFist.castShadow = true;
+    rFist.receiveShadow = true;
+    rFist.position.x = 7;
+    scene.add(rFist);
+    human.add(rFist);
+    console.log("Added Right Fist Cube Primitive to scene...");
     //Add a BODY to the Scene
     bodyMaterial = new LambertMaterial({ color: 0x9900CC });
     bodyGeometry = new CubeGeometry(5, 5, 2);
