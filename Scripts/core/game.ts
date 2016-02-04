@@ -49,7 +49,7 @@ var cubeGeometry:CubeGeometry;
 var cubeMaterial:LambertMaterial;
 
 ///////////////////////////////////
-var human:Object3D;
+var human;
 var head: Mesh;
 var headGeometry:CubeGeometry;
 var headMaterial:LambertMaterial;
@@ -113,6 +113,7 @@ function init() {
     console.log("Added Cube Primitive to scene...");
     
     ////////////////////////////////////////////////////
+    human = new THREE.Object3D();
     //Add a HEAD to the Scene
     headMaterial = new LambertMaterial({color:0xFFCCCC});
     headGeometry = new CubeGeometry(2, 2, 2);
