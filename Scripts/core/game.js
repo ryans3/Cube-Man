@@ -99,7 +99,7 @@ function init() {
     head = new Mesh(headGeometry, headMaterial);
     head.castShadow = true;
     head.receiveShadow = true;
-    head.position.y = 6;
+    head.position.y = 4;
     scene.add(head);
     human.add(head);
     console.log("Added Head Cube Primitive to scene...");
@@ -109,7 +109,7 @@ function init() {
     body = new Mesh(bodyGeometry, bodyMaterial);
     body.castShadow = true;
     body.receiveShadow = true;
-    body.position.y = 1;
+    body.position.y = -1;
     scene.add(body);
     human.add(body);
     console.log("Added body Cube Primitive to scene...");
