@@ -156,7 +156,7 @@ function init() {
     rFist = new Mesh(rFistGeometry, rFistMaterial);
     rFist.castShadow = true;
     rFist.receiveShadow = true;
-    rFist.position.x = 8;
+    rFist.position.x = 9;
     
     scene.add(rFist);
     human.add(rFist);
@@ -201,7 +201,7 @@ function init() {
     
     //Add a LEFT LEG to the Scene
     lLegMaterial = new LambertMaterial({color:0x0000CC});
-    lLegGeometry = new CubeGeometry(2, -6, 2);
+    lLegGeometry = new CubeGeometry(1, -6, 2);
     lLeg = new Mesh(lLegGeometry, lLegMaterial);
     lLeg.castShadow = true;
     lLeg.receiveShadow = true;
@@ -215,7 +215,7 @@ function init() {
     
     //Add a RIGHT LEG to the Scene
     rLegMaterial = new LambertMaterial({color:0x0000CC});
-    rLegGeometry = new CubeGeometry(2,-6, 2);
+    rLegGeometry = new CubeGeometry(1,-6, 2);
     rLeg = new Mesh(rLegGeometry, rLegMaterial);
     rLeg.castShadow = true;
     rLeg.receiveShadow = true;
