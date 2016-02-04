@@ -100,7 +100,7 @@ function init() {
     plane.rotation.x = -0.5 * Math.PI;
     ////////////////////////////////////////////
     // Changing Plane Positioning
-    plane.position.y = -5;
+    plane.position.y = -8;
 
     scene.add(plane);
     console.log("Added Plane Primitive to scene...");
@@ -124,7 +124,7 @@ function init() {
     head = new Mesh(headGeometry, headMaterial);
     head.castShadow = true;
     head.receiveShadow = true;
-    head.position.y = 4;
+    head.position.y = 2;
     
     scene.add(head);
     human.add(head);
@@ -173,7 +173,7 @@ function init() {
     lLeg = new Mesh(lLegGeometry, lLegMaterial);
     lLeg.castShadow = true;
     lLeg.receiveShadow = true;
-    lLeg.position.y = -7;
+    lLeg.position.y = -5;
     lLeg.position.x = 2;
     
     scene.add(lLeg);
@@ -187,7 +187,7 @@ function init() {
     rLeg = new Mesh(rLegGeometry, rLegMaterial);
     rLeg.castShadow = true;
     rLeg.receiveShadow = true;
-    rLeg.position.y = -7;
+    rLeg.position.y = -5;
     rLeg.position.x = -2;
     
     scene.add(rLeg);
