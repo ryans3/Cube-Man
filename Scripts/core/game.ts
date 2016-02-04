@@ -279,6 +279,7 @@ function addControl(controlObject: Control): void {
 
 var HumanControls = function() {
     this.humanColor = "#ff0098";
+   
 }
 var gui = new dat.GUI();
 var hc = new HumanControls();
@@ -286,7 +287,7 @@ var f1 = gui.addFolder("Colors")
 var humanColor = f1.addColor(hc,"humanColor");
 
 humanColor.onChange(function(value){
-    
+    alert("This is changing colors");
 })
 /////////////////////////////////////////////////////////
 function addStatsObject() {
