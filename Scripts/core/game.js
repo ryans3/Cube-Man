@@ -70,6 +70,7 @@ var lLeg;
 var lLegGeometry;
 var lLegMaterial;
 var randomColors;
+var gui2;
 ///////////////////////////////////
 function init() {
     initializeColor();
@@ -213,7 +214,8 @@ function initializeColor() {
     randomColors = new function () {
         this.color = 0xffffff;
     };
-    gui.addColor(randomColors, "color");
+    gui2 = new dat.GUI();
+    gui2.addColor(randomColors, "color");
 }
 function onResize() {
     camera.aspect = CScreen.RATIO;

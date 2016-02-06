@@ -82,7 +82,8 @@ var lLeg: Mesh;
 var lLegGeometry:CubeGeometry;
 var lLegMaterial:LambertMaterial;
 
-var randomColors
+var randomColors;
+var gui2;
 ///////////////////////////////////
 
 function init() {
@@ -268,7 +269,8 @@ function initializeColor(){
         
       this.color=0xffffff;  
     };
-    gui.addColor(randomColors, "color");
+    gui2 = new dat.GUI();
+    gui2.addColor(randomColors, "color");
 }
 
 function onResize(): void {
