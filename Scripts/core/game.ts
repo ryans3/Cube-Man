@@ -132,17 +132,16 @@ function init() {
     
     ////////////////////////////////////////////////////
     human = new THREE.Object3D();
-    humanMaterial = new LambertMaterial({color:0xFF00CC});
+    humanMaterial = new LambertMaterial({color:0xFFCCCC});
     //Add a HEAD to the Scene
     
-    headMaterial = new LambertMaterial({color:0xFFCCCC});
+    //headMaterial = new LambertMaterial({color:0xFFCCCC});
     headGeometry = new CubeGeometry(2, 2, 2);
-    head = new Mesh(headGeometry, headMaterial);
+    head = new Mesh(headGeometry, humanMaterial);
     head.castShadow = true;
     head.receiveShadow = true;
     head.position.y = 2.5;
     
-    head.material = headMaterial;
     
     scene.add(head);
     human.add(head);
@@ -241,6 +240,7 @@ function init() {
     scene.add(human);
     human.position.y = 4;
     human.position.z = 6;
+    
     ////////////////////////////////////////////////////
     // Add an AmbientLight to the scene
     ambientLight = new AmbientLight(0x090909);
@@ -270,14 +270,16 @@ function init() {
     window.addEventListener('resize', onResize, false);
 }
 
+
+//INITIALIZE COLORS
 function initializeColor(){
     
     randomColors = new function(){
         
-      this.color=0xffffff;  
+      this.color=0xFFCCCC;  
     };
     gui2 = new dat.GUI();
-    gui2.addColor(randomColors, "color");
+    gui2.addColor(randomColors, 'color');
 }
 
 function onResize(): void {
@@ -293,28 +295,9 @@ function addControl(controlObject: Control): void {
     gui.add(controlObject, 'rotationSpeedY',-0.5,0.5);
     gui.add(controlObject, 'rotationSpeedZ',-0.5,0.5);
     
-    //gui.addColor(human, "Color");
 }
 
-/////////////////////////////////////////////////////////
-//ADDING COLORS
 
-/*var HumanControls = function() {
-    this.humanColor = "#ff0098";
-   
-}
-var gui = new dat.GUI();
-var hc = new HumanControls();
-var f1 = gui.addFolder("Colors")
-var humanColor = f1.addColor(hc,"humanColor");
-
-humanColor.onChange(function(value){
-    
-    //alert("This is changing colors");
-})*/
-
-
-/////////////////////////////////////////////////////////
 function addStatsObject() {
     stats = new Stats();
     stats.setMode(0);
@@ -328,10 +311,19 @@ function addStatsObject() {
 function gameLoop(): void {
     stats.update();
     
-    //color testing
-//human.material.color.setHex(randomColors.color);
-    //cube.rotation.y += control.rotationSpeed;
-    ///////////////////////////////////////
+    //////////////////////Color Fix////////////////////////
+    humanMaterial.color.setHex(randomColors.color);
+    if(randomColors.color != 0xffcccc){
+        head.material = humanMaterial;
+        body.material = humanMaterial;
+        lArm.material = humanMaterial;
+        rArm.material = humanMaterial;
+        lFist.material = humanMaterial;
+        rFist.material = humanMaterial;
+        lLeg.material = humanMaterial;
+        rLeg.material = humanMaterial;
+    }
+    /////////////////////////////////////////////////////
     
     //rotates HUMAN OBJECT
     human.rotation.y += control.rotationSpeedX;
