@@ -86,6 +86,8 @@ var randomColors
 ///////////////////////////////////
 
 function init() {
+    initializeColor();
+    
     // Instantiate a new Scene object
     scene = new Scene();
 
@@ -260,6 +262,15 @@ function init() {
     window.addEventListener('resize', onResize, false);
 }
 
+function initializeColor(){
+    
+    randomColors = new function(){
+        
+      this.color=0xffffff;  
+    };
+    gui.addColor(randomColors, "color");
+}
+
 function onResize(): void {
     camera.aspect = CScreen.RATIO;
     //camera.aspect = window.innerWidth / window.innerHeight;
@@ -272,13 +283,14 @@ function addControl(controlObject: Control): void {
     gui.add(controlObject, 'rotationSpeedX',-0.5,0.5);
     gui.add(controlObject, 'rotationSpeedY',-0.5,0.5);
     gui.add(controlObject, 'rotationSpeedZ',-0.5,0.5);
+    
     //gui.addColor(human, "Color");
 }
 
 /////////////////////////////////////////////////////////
 //ADDING COLORS
 
-var HumanControls = function() {
+/*var HumanControls = function() {
     this.humanColor = "#ff0098";
    
 }
@@ -290,7 +302,9 @@ var humanColor = f1.addColor(hc,"humanColor");
 humanColor.onChange(function(value){
     
     //alert("This is changing colors");
-})
+})*/
+
+
 /////////////////////////////////////////////////////////
 function addStatsObject() {
     stats = new Stats();
@@ -304,7 +318,9 @@ function addStatsObject() {
 // Setup main game loop
 function gameLoop(): void {
     stats.update();
-
+    
+    //color testing
+human.material.color.setHex(randomColors.color);
     //cube.rotation.y += control.rotationSpeed;
     ///////////////////////////////////////
     
