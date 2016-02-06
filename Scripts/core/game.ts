@@ -329,7 +329,7 @@ function gameLoop(): void {
     stats.update();
     
     //color testing
-human.material.color.setHex(randomColors.color);
+//human.material.color.setHex(randomColors.color);
     //cube.rotation.y += control.rotationSpeed;
     ///////////////////////////////////////
     
